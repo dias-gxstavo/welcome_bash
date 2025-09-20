@@ -47,5 +47,6 @@ echo -e '$GREEN CPU$NC: $(grep -m 1 'model name' /proc/cpuinfo | cut -d: -f2 | s
 echo -e '$GREEN Disk Space (/)$NC: $(df -h / | awk 'NR==2 {print $4 " free of " $2}')';
 echo;
 echo -e ' $USUARIO@$HOSTNAME system started!';
-read
+sleep 5
+exit
 "
