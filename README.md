@@ -11,3 +11,6 @@ This Bash script displays a personalized welcome message in a new GNOME terminal
 - Shows CPU model
 - Displays available disk space on root directory
 - Greets the user with a time-based message (morning, afternoon, or night)
+
+
+![Welcome image](public/image.png)
