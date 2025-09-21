@@ -2,7 +2,7 @@
 
 # Welcome script to Linux Mint
 
-USUARIO=$(whoami)
+USER=$(whoami)
 HOSTNAME=$(hostname)
 DATE=$(date '+%d/%m/%Y')
 HOURMIN=$(date '+%H:%M')
@@ -26,7 +26,7 @@ fcheck_hour() {
     fi
 }
 
-gnome-terminal --title="welcome, $USUARIO! $(fcheck_hour)" -- bash -c "
+gnome-terminal --title="welcome, $USER! $(fcheck_hour)" -- bash -c "
 echo '
  ░██       ░██            ░██                                                  
 ░██       ░██            ░██                                                  
@@ -46,7 +46,7 @@ echo -e '$GREEN OS Info$NC: $PRETTY_NAME';
 echo -e '$GREEN CPU$NC: $(grep -m 1 'model name' /proc/cpuinfo | cut -d: -f2 | sed 's/^[ \t]*//')';
 echo -e '$GREEN Disk Space (/)$NC: $(df -h / | awk 'NR==2 {print $4 " free of " $2}')';
 echo;
-echo -e ' $USUARIO@$HOSTNAME system started!';
+echo -e ' $USER@$HOSTNAME system started!';
 sleep 7
 exit
 "
